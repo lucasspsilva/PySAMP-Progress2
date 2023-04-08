@@ -114,10 +114,10 @@ def set_player_progress_bar_value(playerid: int, progressbar: int, value: float)
 
 
 def get_player_progress_bar_direction(playerid: int, progressbar: int):
-    return CallRemoteFunction("GetPlayerProgressBarDirection_py", playerid, progressbar)
+    return CallRemoteFunction("GetPlayerProgressBarDirection_p", playerid, progressbar)
 
 
 def set_player_progress_bar_direction(playerid: int, progressbar: int, direction: int):
     return CallRemoteFunction(
-        "SetPlayerProgressBarDirection_py", playerid, progressbar, direction
+        "SetPlayerProgressBarDirection_p", playerid, progressbar, direction
     )
