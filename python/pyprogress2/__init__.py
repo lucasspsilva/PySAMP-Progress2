@@ -38,6 +38,10 @@ def show_player_progress_bar(playerid: int, progressbar: int):
     return CallRemoteFunction("ShowPlayerProgressBar_py", playerid, progressbar)
 
 
+def hide_player_progress_bar(playerid: int, progressbar: int):
+    return CallRemoteFunction("HidePlayerProgressBar_py", playerid, progressbar)
+
+
 def get_player_progress_bar_pos(playerid: int, progressbar: int):
     pos_packed = CallRemoteFunction("GetPlayerProgressBarPos_py", playerid, progressbar)
     x = pos_packed & 0xFFFF
