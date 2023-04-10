@@ -18,17 +18,19 @@ class PlayerProgressBar:
         direction: int = BAR_DIRECTION_RIGHT,
     ):
         return cls(
-            create_player_progress_bar(
             playerid,
-            x,
-            y,
-            width,
-            height,
-            color,
-            max,
-            direction,            
+            create_player_progress_bar(
+                playerid,
+                x,
+                y,
+                width,
+                height,
+                color,
+                max,
+                direction,            
             )
         )
+
 
     
     def destroy(self):
