@@ -84,7 +84,7 @@ def set_player_progress_bar_color(playerid: int, progressbar: int, color: int):
     )
 
 
-set_player_progress_bar_colour = get_player_progress_bar_color
+set_player_progress_bar_colour = set_player_progress_bar_color
 
 
 def get_player_progress_bar_max_value(playerid: int, progressbar: int):
