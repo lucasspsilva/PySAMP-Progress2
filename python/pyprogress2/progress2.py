@@ -1,8 +1,9 @@
 from . import *
 
 class PlayerProgressBar:
-    def __init__(self, id) -> None:
-        self.id = id
+    def __init__(self, playerid: int, bar_id: int) -> None:
+        self.playerid = playerid
+        self.bar_id = bar_id
 
     @classmethod
     def create(
@@ -30,51 +31,54 @@ class PlayerProgressBar:
         )
 
     
-    def destroy_for_player(self, playerid: int):
-        return destroy_player_progress_bar(playerid, self.id)
+    def destroy(self):
+        return destroy_player_progress_bar(self.playerid, self.bar_id)
     
-    def show_for_player(self, playerid: int):
-        return show_player_progress_bar(playerid, self.id)
+    def hide(self):
+        return hide_player_progress_bar(self.playerid, self.bar_id)
     
-    def get_pos_for_player(self, playerid: int):
-        return get_player_progress_bar_pos(playerid, self.id)
+    def show(self):
+        return show_player_progress_bar(self.playerid, self.bar_id)
     
-    def set_pos_for_player(self, playerid: int, x: float, y: float):
-        return set_player_progress_bar_pos(playerid, self.id, x, y)
+    def get_pos(self):
+        return get_player_progress_bar_pos(self.playerid, self.bar_id)
     
-    def get_width_for_player(self, playerid: int):
-        return get_player_progress_bar_width(playerid, self.id)
+    def set_pos(self, x: float, y: float):
+        return set_player_progress_bar_pos(self.playerid, self.bar_id, x, y)
     
-    def set_width_for_player(self, playerid: int, width: float):
-        return set_player_progress_bar_width(playerid, self.id, width)
+    def get_width(self):
+        return get_player_progress_bar_width(self.playerid, self.bar_id)
     
-    def get_height_for_player(self, playerid: int):
-        return get_player_progress_bar_height(playerid, self.id)
+    def set_width(self, width: float):
+        return set_player_progress_bar_width(self.playerid, self.bar_id, width)
     
-    def set_height_for_player(self, playerid: int, height: float):
-        return set_player_progress_bar_height(playerid, self.id, height)
+    def get_height(self):
+        return get_player_progress_bar_height(self.playerid, self.bar_id)
     
-    def get_colour_for_player(self, playerid: int):
-        return get_player_progress_bar_colour(playerid, self.id)
+    def set_height(self, height: float):
+        return set_player_progress_bar_height(self.playerid, self.bar_id, height)
     
-    def set_colour_for_player(self, playerid: int, colour: int):
-        return set_player_progress_bar_colour(playerid, self.id, colour)
+    def get_colour(self):
+        return get_player_progress_bar_colour(self.playerid, self.bar_id)
     
-    def get_max_value_for_player(self, playerid: int):
-        return get_player_progress_bar_max_value(playerid, self.id)
+    def set_colour(self, colour: int):
+        return set_player_progress_bar_color(self.playerid, self.bar_id, colour)
     
-    def set_max_value_for_player(self, playerid: int, max_val: float):
-        return set_player_progress_bar_max_value(playerid, self.id, max_val)
+    def get_max_value(self):
+        return get_player_progress_bar_max_value(self.playerid, self.bar_id)
     
-    def get_value_for_player(self, playerid: int):
-        return get_player_progress_bar_value(playerid, self.id)
+    def set_max_value(self, max_val: float):
+        return set_player_progress_bar_max_value(self.playerid, self.bar_id, max_val)
     
-    def set_value_for_player(self, playerid: int, value: float):
-        return set_player_progress_bar_value(playerid, self.id, value)
+    def get_value(self):
+        return get_player_progress_bar_value(self.playerid, self.bar_id)
     
-    def get_direction_for_player(self, playerid: int):
-        return get_player_progress_bar_direction(playerid, self.id)
+    def set_value(self, value: float):
+        return set_player_progress_bar_value(self.playerid, self.bar_id, value)
     
-    def set_direction_for_player(self, playerid: int, direction: int):
-        return set_player_progress_bar_direction(playerid, self.id, direction)
+    def get_direction(self):
+        return get_player_progress_bar_direction(self.playerid, self.bar_id)
+    
+    def set_direction(self, direction: int):
+        return set_player_progress_bar_direction(self.playerid, self.bar_id, direction)
 
