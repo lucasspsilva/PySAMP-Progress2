@@ -4,8 +4,8 @@ Progress2 include adapted to be used with PySAMP
 
 ## Installing
 
-1.  Download the repository and put the filterscript and python folders in your server folder.
-2.  Add the filterscript to your `server.cfg`.
+1.  Download the repository and put all folders in the server folder.
+2.  Add `#include "../progress/progress.pwn` to your gamemode script and compile or use empty gamemode provided on gamemodes folder.
 
 ## Usage
 
